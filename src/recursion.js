@@ -213,20 +213,30 @@ var divide = function(x, y) {
 // gcd(4,36); // 4
 // http://www.cse.wustl.edu/~kjg/cse131/Notes/Recursion/recursion.html
 // https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
-var gcd = function(x, y) {	
+var gcd = function(x, y) {
+	//1 1 1
+	//1 2 1
+	//4 5 1
+	//4 20 4
+	//10 25 5
+		
 };
 
 // 15. Write a function that compares each character of two strings and returns true if
 // both are identical.
 // compareStr('house', 'houses') // false
 // compareStr('tomato', 'tomato') // true
-/*var compareStr = function(str1, str2) {
-	if(str1.length !== str2.length)
+var compareStr = function(str1, str2) {
+	/*if(str1.length !== str2.length)
 		return false;
 	if(str2.length === 0)
+		return true;*/
+	console.log(str1);
+	console.log(str2);
+	if((str1 === '') && (str2 === ''))
 		return true;
 	return ((str1[0] === str2[0]) && compareStr(str1.slice(1), str2.slice(1)));
-};*/
+};
 
 // 16. Write a function that accepts a string and creates an array where each letter
 // occupies an index of the array.
