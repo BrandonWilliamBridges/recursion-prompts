@@ -213,37 +213,14 @@ var divide = function(x, y) {
 // gcd(4,36); // 4
 // http://www.cse.wustl.edu/~kjg/cse131/Notes/Recursion/recursion.html
 // https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
-var gcd = function(x = 10, y = 25) {
+var gcd = function(x, y) {
 	if((x < 0)||(y < 0))
 		return null;
 	if(x % y === 0) return y;
 	if(y % x === 0) return x;
 	if(x % y === x) return gcd(x, y % x);
 	if(y % x === y) return gcd(x % y, y);
-	//return gcd(x % y, y % x);
-	// 10 25
-
-		// 1/1=1
-	// 1%1=0
-	// 2/1=1
-	// 2%1=1
-	// 4/2=2
-	// 4%2=0
-	// 5/2=2.2
-	// 5%2=1
-	// 25/10 = 2.5
-	// 25%10 = 5
-	// 25%10 + 10%25 = 5,25 + 10,10
-//25%10 = 5
-//10%25 = 10
-
-	// y%x + x%y
-};
-
-// 15. Write a function that compares each character of two strings and returns true if
-// both are identical.
-// compareStr('house', 'houses') // false
-// compareStr('tomato', 'tomato') // true
+	};
 var compareStr = function(str1, str2) {
 	if((str1 === '') && (str2 === ''))
 		return true;
